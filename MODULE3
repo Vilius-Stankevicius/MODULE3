@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class testthree
+    public static void main(String[] args) {
+        Establishes scanner object // STILL NOT SURE ABOUT OBJECTS AND HOW THEY COMMUNICATE BUT I THINK WE WILL HAVE YET TO COVER OOP
+        Scanner scanner = new Scanner(System.in);
+
+        // PROMPT INCOME INPUT
+        System.out.print("PLEASE ENTER WEEKLY INCOME:  ");
+        double income = scanner.nextDouble();
+
+        // ESTABLISH TAX BASED ON INCOME
+        double tax; 
+
+        if (income < 500) {
+            tax = income * 0.10; // creates event for 10% tax 
+        } else if (income < 1500) {
+            tax = income * 0.15; // creates event for 15% tax 
+        } else if (income < 2500) {
+            tax = income * 0.20; // creates event for 20% tax 
+        } else {
+            tax = income * 0.30; // creates event for 30% tax 
+        }
+
+        //CALCULATE WEEKLY TAX
+        double weeklyAverageTax = tax / 52; 
+
+        //DISPLAY OUTPUT
+        System.out.println("Your weekly average tax withholding is: $" + weeklyAverageTax);
+
+        
+    }
+}
+
